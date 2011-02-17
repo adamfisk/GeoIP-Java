@@ -5,39 +5,45 @@ package com.maxmind.geoip;
 /* Only works with GeoIP Country Edition */
 /* For Geoip City Edition, use CityLookupTest.java */
 
-import java.io.IOException;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-import org.lantern.geoip.*;
+import java.io.File;
 
-class CountryLookupTest {
-    public static void main(String[] args) {
-	try {
-	    String sep = System.getProperty("file.separator");
+import org.junit.Test;
 
-	    // Uncomment for windows
-	    // String dir = System.getProperty("user.dir"); 
+public class CountryLookupTest {
 
-	    // Uncomment for Linux
-	    String dir = "/usr/local/share/GeoIP";
+    @Test
+    public void testCountryLookups() throws Exception {
+        final File dir = new File("/usr/local/share/GeoIP");
 
-	    //String dbfile = dir + sep + "GeoIP.dat";
-	    final String dbfile = "./GeoIP.dat";
-	    // You should only call LookupService once, especially if you use
-	    // GEOIP_MEMORY_CACHE mode, since the LookupService constructor takes up
-	    // resources to load the GeoIP.dat file into memory
-	    //LookupService cl = new LookupService(dbfile,LookupService.GEOIP_STANDARD);
-	    LookupService cl = new LookupService(dbfile,LookupService.GEOIP_MEMORY_CACHE);
+        final String fileName = "GeoIP.dat";
+        final File file;
+        if (dir.isDirectory()) {
+            file = new File(dir, fileName);
+        }
+        else {
+            file = new File(fileName);
+        }
+        
+        assertTrue("No data file found!! Download GeoIP.dat", file.isFile());
+        
+        // You should only call LookupService once, especially if you use
+        // GEOIP_MEMORY_CACHE mode, since the LookupService constructor
+        // takes up
+        // resources to load the GeoIP.dat file into memory
+        // LookupService cl = new
+        // LookupService(dbfile,LookupService.GEOIP_STANDARD);
+        final LookupService cl = new LookupService(file,
+            LookupService.GEOIP_MEMORY_CACHE);
 
-	    System.out.println(cl.getCountry("151.38.39.114").getCode());
-	    System.out.println(cl.getCountry("151.38.39.114").getName());
-	    System.out.println(cl.getCountry("12.25.205.51").getName());
-	    System.out.println(cl.getCountry("64.81.104.131").getName());
-	    System.out.println(cl.getCountry("200.21.225.82").getName());
+        assertEquals("IT", cl.getCountry("151.38.39.114").getCode());
+        assertEquals("Italy", cl.getCountry("151.38.39.114").getName());
+        assertEquals("United States", cl.getCountry("12.25.205.51").getName());
+        assertEquals("United States", cl.getCountry("64.81.104.131").getName());
+        assertEquals("Colombia", cl.getCountry("200.21.225.82").getName());
 
-	    cl.close();
-	}
-	catch (IOException e) {
-	    System.out.println("IO Exception");
-	}
+        cl.close();
     }
 }
