@@ -18,6 +18,20 @@
         <url>http://www.gnu.org/licenses/gpl.txt</url> 
         <distribution>repo</distribution>
     </licenses>
+
+    <scm>
+        <url>https://adamfisk@github.com/adamfisk/GeoIP-Java.git</url>
+        <connection>https://adamfisk@github.com/adamfisk/GeoIP-Java.git</connection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>adamfisk</id>
+            <name>Adam Fisk</name>
+            <email>a@littleshoot.org</email>
+        </developer>
+    </developers>
+
     <inceptionYear>2011</inceptionYear>
 
     <dependencies>
