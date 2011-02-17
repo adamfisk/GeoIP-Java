@@ -6,59 +6,22 @@
   <packaging>jar</packaging>
   <version>0.1-SNAPSHOT</version>
   <name>Geo IP Database</name>
-  <url>http://www.littleshoot.org/udt</url>
-
-    <properties>
-       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
+  <url>http://www.littleshoot.org</url>
 
     <organization>
         <name>LittleShoot</name>
         <url>http://www.littleshoot.org</url>
-        </organization>
+    </organization>
 
     <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            </license>
-        </licenses>
-    <inceptionYear>2010</inceptionYear>
+        <name>GNU General Public License Version 2</name> 
+        <url>http://www.gnu.org/licenses/gpl.txt</url> 
+        <distribution>repo</distribution>
+    </licenses>
+    <inceptionYear>2011</inceptionYear>
 
     <dependencies>
       
-<!--
-        <dependency>
-            <groupId>com.barchart.udt</groupId>
-            <artifactId>barchart-udt4</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
--->
-
-        <dependency>
-            <groupId>com.barchart.udt</groupId>
-            <artifactId>barchart-udt4-bundle</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-httpclient</groupId>
-            <artifactId>commons-httpclient</artifactId>
-            <version>3.1</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -85,48 +48,5 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2-beta-5</version>
-                <executions>
-                    <execution>
-                        <id>latest-build</id>
-                        <phase>package</phase>
-                        <configuration>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-
-                            <archive>
-                                <manifest>
-                                    <mainClass>com.maxmind.geoip.CountryLookupTest</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
-    <repositories>
-                <repository>
-                        <id>sonatype-nexus-snapshots</id>
-                        <name>Sonatype Nexus Snapshots</name>
-                        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                        <releases>
-                                <enabled>false</enabled>
-                        </releases>
-                        <snapshots>
-                                <enabled>true</enabled>
-                        </snapshots>
-                </repository>
-        </repositories>
 
 </project>
