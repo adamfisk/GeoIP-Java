@@ -3,7 +3,7 @@
   <groupId>org.littleshoot</groupId>
   <artifactId>geoip</artifactId>
   <packaging>jar</packaging>
-  <version>0.1</version>
+  <version>0.2-SNAPSHOT</version>
   <name>Geo IP Database</name>
   <url>http://www.littleshoot.org</url>
 
