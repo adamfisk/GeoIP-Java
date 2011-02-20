@@ -27,13 +27,6 @@
     <version>6</version>
   </parent>
 
-<!--
-  <scm>
-  <url>https://adamfisk@github.com/adamfisk/GeoIP-Java.git</url>
-  <connection>https://adamfisk@github.com/adamfisk/GeoIP-Java.git</connection>
-  </scm>
--->
-
   <scm>
     <connection>scm:git:git@github.com:adamfisk/GeoIP-Java.git</connection>
     <developerConnection>scm:git:git@github.com:adamfisk/GeoIP-Java.git</developerConnection>
