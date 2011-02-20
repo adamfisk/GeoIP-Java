@@ -8,9 +8,11 @@ import org.junit.Ignore;
 
 @Ignore
 public class DistributedServiceTest {
+
     public static void main(String[] args) {
         try {
 	    // /usr/local/share/GeoIP/GeoIPCity.dat is the location of a backup local copy of the database
+            
             LookupService cl = new LookupService(0,args[0]);
             Location l = cl.getLocation(args[1]);
             System.out.println("countryCode: " + l.countryCode +

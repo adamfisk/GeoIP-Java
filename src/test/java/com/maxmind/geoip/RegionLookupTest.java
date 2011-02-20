@@ -6,7 +6,10 @@ package com.maxmind.geoip;
 
 import java.io.IOException;
 
-class RegionLookupTest {
+import org.junit.Ignore;
+
+@Ignore
+public class RegionLookupTest {
     public static void main(String[] args) {
         try {
             LookupService cl = 

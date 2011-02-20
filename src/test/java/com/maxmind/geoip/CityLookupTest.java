@@ -11,6 +11,7 @@ import org.junit.Ignore;
 
 @Ignore
 public class CityLookupTest {
+        
     public static void main(String[] args) {
 	try {
 	    LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIPCity.dat",

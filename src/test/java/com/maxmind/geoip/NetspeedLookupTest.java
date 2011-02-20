@@ -1,7 +1,6 @@
 package com.maxmind.geoip;
 /* NetspeedLookup.java */
 
-import com.maxmind.geoip.*;
 import java.io.IOException;
 
 import org.junit.Ignore;

@@ -1,7 +1,6 @@
 package com.maxmind.geoip;
 /* OrgLookupTest.java */
 
-import com.maxmind.geoip.*;
 import java.io.IOException;
 
 import org.junit.Ignore;
@@ -11,7 +10,7 @@ import org.junit.Ignore;
 /* Usage: java OrgLookupTest 64.4.4.4 */
 
 @Ignore
-class OrgLookupTest {
+public class OrgLookupTest {
     public static void main(String[] args) {
 	try {
 	    LookupService orgl = new LookupService("/usr/local/share/GeoIP/GeoIPOrg.dat");
