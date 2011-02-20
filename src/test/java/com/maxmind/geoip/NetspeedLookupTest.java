@@ -4,10 +4,13 @@ package com.maxmind.geoip;
 import com.maxmind.geoip.*;
 import java.io.IOException;
 
+import org.junit.Ignore;
+
 /* sample of how to use the GeoIP Java API with GeoIP Netspeed database */
 /* Usage: java NetspeedLookupTest 24.24.24.24 */
 
-class NetspeedLookupTest {
+@Ignore
+public class NetspeedLookupTest {
     public static void main(String[] args) {
         try {
             LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIPNetspeed.dat");

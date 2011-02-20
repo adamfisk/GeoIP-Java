@@ -2,10 +2,12 @@ package com.maxmind.geoip;
 
 // Usage: CLASSPATH=".:source" java DistributedServiceTest LICENSE_KEY 24.24.24.24
 
-import com.maxmind.geoip.*;
 import java.io.IOException;
 
-class DistributedServiceTest {
+import org.junit.Ignore;
+
+@Ignore
+public class DistributedServiceTest {
     public static void main(String[] args) {
         try {
 	    // /usr/local/share/GeoIP/GeoIPCity.dat is the location of a backup local copy of the database

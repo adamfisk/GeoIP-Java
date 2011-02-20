@@ -2,13 +2,15 @@ package com.maxmind.geoip;
 
 /* CityLookupTest.java */
 
-import com.maxmind.geoip.*;
 import java.io.IOException;
+
+import org.junit.Ignore;
 
 /* sample of how to use the GeoIP Java API with GeoIP City database */
 /* Usage: java CityLookupTest 64.4.4.4 */
 
-class CityLookupTest {
+@Ignore
+public class CityLookupTest {
     public static void main(String[] args) {
 	try {
 	    LookupService cl = new LookupService("/usr/local/share/GeoIP/GeoIPCity.dat",
