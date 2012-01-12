@@ -131,7 +131,7 @@ public class LookupService {
         new HashMap<String, Integer>(512);
     private static final Map<String, Integer> hashmapcountryNametoindex = 
         new HashMap<String, Integer>(512);
-    private static final String[] countryCode = {
+    public static final String[] countryCode = {
         "--","AP","EU","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR",
         "AS","AT","AU","AW","AZ","BA","BB","BD","BE","BF","BG","BH","BI","BJ",
         "BM","BN","BO","BR","BS","BT","BV","BW","BY","BZ","CA","CC","CD","CF",
@@ -152,7 +152,7 @@ public class LookupService {
         "YT","RS","ZA","ZM","ME","ZW","A1","A2","O1","AX","GG","IM","JE","BL",
         "MF"};
 
-    private static final String[] countryName = {
+    public static final String[] countryName = {
         "N/A","Asia/Pacific Region","Europe","Andorra","United Arab Emirates",
         "Afghanistan","Antigua and Barbuda","Anguilla","Albania","Armenia",
         "Netherlands Antilles","Angola","Antarctica","Argentina","American Samoa",
